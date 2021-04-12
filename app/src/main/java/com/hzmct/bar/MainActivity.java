@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 Executors.newCachedThreadPool().execute(new Runnable() {
                     @Override
                     public void run() {
-                        ShellUtils.execCmd("settings put system systembar_hide 0", true); //1为隐藏导航栏，0显示导航栏
+                        ShellUtils.execCmd("settings put system systembar_hide 0", true); // 1: 隐藏，0: 显示
                         sendBroadcast(systemBarIntent);
 
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            ShellUtils.execCmd("settings put system systemstatusbar_hide 0", true); //1隐藏状态栏，0显示状态栏
+                            ShellUtils.execCmd("settings put system systemstatusbar_hide 0", true); // 1: 隐藏状态栏，0: 显示状态栏
                             sendBroadcast(statusBarIntent);
                         }
                     }
@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 Executors.newCachedThreadPool().execute(new Runnable() {
                     @Override
                     public void run() {
-                        ShellUtils.execCmd("settings put system systembar_hide 1", true); //1为隐藏导航栏，0显示导航栏
+                        ShellUtils.execCmd("settings put system systembar_hide 1", true); // 1: 隐藏，0: 显示
                         sendBroadcast(systemBarIntent);
 
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            ShellUtils.execCmd("settings put system systemstatusbar_hide 1", true); //1隐藏状态栏，0显示状态栏
+                            ShellUtils.execCmd("settings put system systemstatusbar_hide 1", true); // 1: 隐藏状态栏，0: 显示状态栏
                             sendBroadcast(statusBarIntent);
                         }
                     }
